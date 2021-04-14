@@ -1,4 +1,5 @@
 JavaScript Framework Watcher
+<br/>
 We always like to keep track of the popularity of various JavaScript frameworks, and one way we do this is by using Github. Namely, we look up each framework on Github, and look at how many Stars, Watchers, and Forks each framework has. Generally, the more of these that a framework has indicates how much engagement people have with that framework. And the amount of engagement with a framework can indicate how popular it is. Of course, this is by no means a perfect measure, but it's something.
 
 The Exercise
