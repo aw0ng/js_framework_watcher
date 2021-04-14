@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.graphContainer {
+  width: 45%;
+  margin-left: 2%;
+  display: inline-block;
+  vertical-align: top;
+}
