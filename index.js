@@ -1,22 +1,20 @@
 /* global Chart */
 
-// const { default: axios } = require("axios");
-
-// var vue_stars = 0;
-// var vue_watchers = 0;
-// var vue_forks = 0;
-// var angular_stars = 0;
-// var angular_watchers = 0;
-// var angular_forks = 0;
-// var ember_stars = 0;
-// var ember_watchers = 0;
-// var ember_forks = 0;
-// var svelte_stars = 0;
-// var svelte_watchers = 0;
-// var svelte_forks = 0;
+var vue_stars = 0;
+var vue_watchers = 0;
+var vue_forks = 0;
+var angular_stars = 0;
+var angular_watchers = 0;
+var angular_forks = 0;
+var ember_stars = 0;
+var ember_watchers = 0;
+var ember_forks = 0;
+var svelte_stars = 0;
+var svelte_watchers = 0;
+var svelte_forks = 0;
 var react_stars = 0;
-// var react_watchers = 0;
-// var react_forks = 0;
+var react_watchers = 0;
+var react_forks = 0;
 
 function waitFor(conditionFunction) {
   const poll = (resolve) => {
@@ -33,7 +31,6 @@ function getData() {
     vue_watchers = response.data.subscribers_count;
     vue_forks = response.data.forks_count;
     vue_value = (vue_forks * 60) / 100 + (vue_stars * 30) / 100 + (vue_watchers * 10) / 100;
-    console.log(vue_forks, vue_stars, vue_watchers, vue_value);
   });
   axios.get("https://api.github.com/repos/angular/angular.js").then((response) => {
     angular_stars = response.data.stargazers_count;
@@ -168,8 +165,9 @@ function drawCharts() {
     },
   });
   var overall = document.getElementById("overall").getContext("2d");
+  console.log(vue_value, angular_value, ember_value, svelte_value, react_value);
   var overall_graph = new Chart(overall, {
-    type: "pie",
+    type: "doughnut",
     data: {
       labels: ["Vue", "Angular", "Ember", "Svelte", "React"],
       datasets: [
@@ -191,6 +189,7 @@ function drawCharts() {
             "rgba(153, 102, 255, 1)",
           ],
           borderWidth: 1,
+          hoverOffset: 4,
         },
       ],
     },
