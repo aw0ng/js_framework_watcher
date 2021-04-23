@@ -7,13 +7,12 @@
     <title>JS Framework Watcher</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="index.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <h1>Javascript Framework Comparisons</h1>
-
     <div class="graphContainer">
       <canvas id="watchers"></canvas>
     </div>
@@ -23,11 +22,14 @@
     <div class="graphContainer">
       <canvas id="forks"></canvas>
     </div>
-    <div class="graphContainer" id="pie">
-      <canvas id="overall"></canvas>
+    <div class="graphContainer">
+      <canvas id="overall" width="170"></canvas>
+      <div class="donut-inner" id="pie">
+        <h5>Most Pouplar</h5>
+        <span>VUE</span>
+      </div>
     </div>
+
     <script></script>
   </body>
 </html>
-
-<!-- commit msg -->
